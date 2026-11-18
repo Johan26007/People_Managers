@@ -652,16 +652,10 @@ public class FrmAsignacion extends javax.swing.JFrame implements AsignacionView 
                 subtitulo.setAlignment(Element.ALIGN_RIGHT);
                 Paragraph subtitulo2 = new Paragraph("Empresa People Managers", fuenteSub);
                 subtitulo2.setAlignment(Element.ALIGN_RIGHT);
-                Paragraph subtitulo3 = new Paragraph("FACULTAD DE INGENIERÍA", fuenteTitulo2);
-                subtitulo3.setAlignment(Element.ALIGN_RIGHT);
-                Paragraph subtitulo4 = new Paragraph("Carrera De Ingeniería En Sistemas", fuenteSub);
-                subtitulo4.setAlignment(Element.ALIGN_RIGHT);
                 
                 celdaTitulo.addElement(titulo);
                 celdaTitulo.addElement(subtitulo);
                 celdaTitulo.addElement(subtitulo2);
-                celdaTitulo.addElement(subtitulo3);
-                celdaTitulo.addElement(subtitulo4);
                 encabezado.addCell(celdaTitulo);
                 
                 documento.add(encabezado);
@@ -880,12 +874,7 @@ public class FrmAsignacion extends javax.swing.JFrame implements AsignacionView 
             g2.setColor(azulPrincipal);
             g2.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 28));
             FontMetrics fmUni = g2.getFontMetrics();
-            g2.drawString("UNIVERSIDAD PEOPLE MANAGERS", (W - fmUni.stringWidth("UNIVERSIDAD PEOPLE MANAGERS")) / 2, 145);
-
-            g2.setColor(azulSecundario);
-            g2.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 19));
-            FontMetrics fmFac = g2.getFontMetrics();
-            g2.drawString("FACULTAD DE INGENIERÍA • SISTEMA ACADÉMICO", (W - fmFac.stringWidth("FACULTAD DE INGENIERÍA • SISTEMA ACADÉMICO")) / 2, 185);
+            g2.drawString("EMPRESA PEOPLE MANAGERS", (W - fmUni.stringWidth("EMPRESA PEOPLE MANAGERS")) / 2, 145);
 
             // 7. Título Principal
             g2.setColor(azulPrincipal);
@@ -913,14 +902,14 @@ public class FrmAsignacion extends javax.swing.JFrame implements AsignacionView 
             // 10. Carnet
             g2.setColor(azulSecundario);
             g2.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 24));
-            String textoCarnet = "No. Colaborador / Carnet: " + carnetMostrado;
+            String textoCarnet = "No. de Colaborador: " + carnetMostrado;
             FontMetrics fmCar = g2.getFontMetrics();
             g2.drawString(textoCarnet, (W - fmCar.stringWidth(textoCarnet)) / 2, 575);
 
             // 11. Cuerpo de Acreditación
             g2.setColor(new Color(50, 50, 50));
             g2.setFont(new java.awt.Font("Segoe UI", java.awt.Font.PLAIN, 22));
-            String linea1 = "Por haber completado satisfactoriamente los cursos del programa académico correspondiente al ciclo 2026,";
+            String linea1 = "Por haber completado satisfactoriamente los cursos del programa de capacitación correspondiente al período 2026,";
             String linea2 = "acreditando encontrarse al día en sus requisitos de capacitación y formación continua.";
             FontMetrics fmCuerpo = g2.getFontMetrics();
             g2.drawString(linea1, (W - fmCuerpo.stringWidth(linea1)) / 2, 670);
@@ -958,7 +947,7 @@ public class FrmAsignacion extends javax.swing.JFrame implements AsignacionView 
 
             g2.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 18));
             FontMetrics fmF2 = g2.getFontMetrics();
-            g2.drawString("Registro Académico • People Managers", sealX - (fmF2.stringWidth("Registro Académico • People Managers") / 2), sealY + sealR + 70);
+            g2.drawString("People Managers • Capacitación", sealX - (fmF2.stringWidth("People Managers • Capacitación") / 2), sealY + sealR + 70);
 
             // 13. Firma Única (Costado Derecho)
             int sigCenterX = W - 450;
